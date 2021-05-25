@@ -1,0 +1,83 @@
+version: "2.0"
+
+intents:
+  - greet
+  - bot_challenge
+  - ac
+  - nonac
+  - book
+  - FAQ1
+  - FAQ2
+  - FAQ3
+  - FAQ4
+  - ac_section
+  - seat_number
+  - time
+  - book_number
+  - reserveseats
+  - reserve_all   
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_book:
+  - text: "How many seats would you like to reserve?"
+  utter_ac:
+  - text: "Which section would you like to book(AC/Non-AC)"
+    buttons:
+    - title: "AC"
+      payload: "/ac"
+    - title: "Non-AC"
+      payload: "/ac"
+  utter_time:
+  - text: "When would you like to book a reservation? (We are only open from 7pm to 10pm,Please enter valid time and format)"
+  utter_FAQ1 :
+  - text: "The restaurant opens at 7pm and closes at 10pm."
+  utter_FAQ2 :
+  - text: "The restaurant is open each and every day."
+  utter_FAQ3 :
+  - text: "To cancel a reservation, simply call us at +91 9876543210 and cancel your reservation"
+  utter_FAQ4 :
+  - text: "Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city."
+  utter_details_thanks:
+  - text: "You have reserved {book_number} seats in our {ac} section for {time}pm. Thanks!"
+  #You have reserved 4 seats in our AC section for 8pm. Thanks!
+action:
+ - utter_greet
+ - utter_iamabot  
+ - utter_iamabot 
+ - utter_book
+ - utter_ac
+ - utter_time
+ - utter_FAQ1
+ - utter_FAQ2
+ - utter_FAQ3
+ - utter_FAQ4
+ - utter_details_thanks
+ - validate_details_form
+ - action_submitdetails
+ 
+forms:
+ detail_form:
+  book_number:
+   - type: from_text 
+  ac:
+   - type: from_text  
+  time:
+   - type: from_text  
+   
+slots:
+ book_number:
+  type: text 
+  influence_conversation: false
+ ac:
+  type: text 
+  influence_conversation: false
+ time:
+  type: text 
+  influence_conversation: false
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
