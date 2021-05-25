@@ -1,0 +1,65 @@
+version: "2.0"
+
+stories:
+
+- story: bookpath1
+  steps:
+
+  - intent: book
+  - action: utter_book
+  - intent: book_number
+  - action: utter_ac
+  - intent: ac
+  - action: utter_time
+  - intent: time
+  - action: utter_details_thanks
+  
+- story: bookpath2
+  steps: 
+
+  - intent: greet
+  - action: utter_greet
+  - intent: book
+  - action: utter_book
+  - intent: book_number
+  - action: utter_ac
+  - intent: ac
+  - action: utter_time
+  - intent: time
+  - action: utter_details_thanks
+
+- story: bookpath3
+  steps: 
+
+  - intent: greet
+  - action: utter_greet
+  - intent: reserve_seats
+  - action: utter_ac
+  - intent: ac
+  - action: utter_time
+  - intent: time
+  - action: utter_details_thanks
+
+- story: bookpath4
+  steps: 
+
+  - intent: greet
+  - action: utter_greet
+  - intent: reseve_all
+  - action: utter_details_thanks
+
+- story: bookpath5
+  steps: 
+
+  - intent: reserve_seats
+  - action: utter_ac
+  - intent: ac
+  - action: utter_time
+  - intent: time
+  - action: utter_details_thanks  
+
+- story: bookpath6
+  steps: 
+
+  - intent: reseve_all
+  - action: utter_details_thanks  

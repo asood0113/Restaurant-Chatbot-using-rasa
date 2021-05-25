@@ -1,0 +1,41 @@
+version: "2.0"
+rules:
+
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say FAQ1 anytime the user says FAQ1
+  steps:
+  - intent: FAQ1
+  - action: utter_FAQ1 
+
+- rule: Say FAQ2 anytime the user says FAQ2
+  steps:
+  - intent: FAQ2
+  - action: utter_FAQ2
+    
+- rule: Say FAQ3 anytime the user says FAQ3
+  steps:
+  - intent: FAQ3
+  - action: utter_FAQ3    
+
+- rule: Say FAQ4 anytime the user says FAQ4
+  steps:
+  - intent: FAQ4
+  - action: utter_FAQ4  
+
+- rule: Submit Project form
+  condition:
+  # Condition that form is active.
+  - active_loop: details_form
+  steps:
+  # Form is deactivated
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - book_number: null
+    - time: null
+    - ac_section: null

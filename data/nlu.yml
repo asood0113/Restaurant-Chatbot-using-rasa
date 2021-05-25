@@ -1,0 +1,105 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - Good morning
+    
+- intent: book
+  examples: |
+    - i want to book a table
+    - i want to reserve a table 
+    - i want a table
+- intent: book_number
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - I want a table for 5 people 
+    - I want a table for one
+    - I want a table for 2
+    - I want a table for 1
+    - I want a table for 3
+- intent: time
+  examples: |
+    - 7:00PM
+    - 7:00Pm
+    - 7Pm   
+- intent: ac
+  examples: |
+    - ac
+    - AC
+    - non-ac
+    - Non-AC
+    - nonac
+- intent: reserveseats
+  examples: |
+    - I want to reserve a table for a party of 4
+    - I want to reserve a table for 2
+    - I want to reserve a table for a party of 1
+    - I want to reserve a table for 2
+    - I want to reserve 2 seats
+    - want to reserve a table for 2 
+    - I want to reserve a table for a party of 4
+    - i want to book 4 seats
+    - reserve table for 4
+    - 4 seats for reservation
+    - I want to reserve a table for a party of 2
+    - i want to book 2 seats
+    - reserve table for 2
+    - 2 seats for reservation
+    - I want to reserve a table for a party of 3
+    - i want to book 2 seats
+    - reserve table for 3
+    - 3 seats for reservation
+    - I want to reserve a table for a party of 1
+    - i want to book 1 seats
+    - reserve table for 1
+    - 1 seats for reservation
+- intent: reserve_all
+  examples: |
+    - I want to reserve a table for a party of 4 in non ac section  at 9:00pm
+    - I want to book a table for 4 at in non-ac section at 7:00pm
+    - I want to book a table for 4 at in ac section at 7:00pm
+    - I want to reserve 2 seats in our AC section for 7:30pm.
+    - I want to book a table for 4 at in non-ac section at 7:00pm
+    - I want to book 3 AC rooms at 7:30pm
+- intent: FAQ1
+  examples: |
+    - What are your timings?
+    - What time are you open
+    - what time are you open
+- intent: FAQ2
+  examples: |
+    - What days are you open?
+    - On what days are you open
+    - what days are you open
+    - when open
+- intent: FAQ3
+  examples: |
+    - How do I cancel a reservation?
+    - Cancel
+    - cancel
+    - How to cancel
+    - how do i cancel a reservation
+    - how to cancel 
+- intent: FAQ4
+  examples: |
+    - What are the specials?
+    - what are the specials
+    - what specials are available 
+    - specials
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?   
